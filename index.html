@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Catch Me If You Can</title>
+
+</head> 
+<body>
+	<h1><span> Catch Beanie The Bear If You Can </span></h1>
+	<button class="button button1" type="button" id="moveButton">🐻</button>
+
+<script>
+	function randMove(element){
+	element.style.position ='absolute';
+	element.style.top = Math.floor(Math.random()*75+5)+'%';
+	element.style.right = Math.floor(Math.random()*75+5)+'%';
+	}
+
+	var moveButton = document.querySelector('#moveButton');
+	moveButton.addEventListener('mouseenter', function(a){randMove(a.target);});
+	moveButton.addEventListener('click', function(a){alert('Woooow! You did it🥳');});
+</script>
+
+</body> 
+</html>
